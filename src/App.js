@@ -3,6 +3,8 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 
 // Import Pages & Components
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Bio from './pages/Bio';
 import Projects from './pages/Projects';
@@ -20,8 +22,8 @@ function App() {
     <Router>
           <div className="App">
 
-            {/* Header Navigation Bar */}
-            <ResponsiveAppBar
+            {/* Header Navigation Bar TODO: not on home page, add to individual pages?*/}
+            <NavBar
             pages={pages}
             currentPage={currentPage}
             setCurrentPage={setCurrentPage} />
